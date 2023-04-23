@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--css file-->
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <!--navbar-->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <img src="./images/logo.png" alt="logo" class="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
     aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +58,75 @@
     </div>
   </div>
 </nav>
+
+<!--second child-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <ul class="navbar-nav me-auto">
+  <li class="nav-item">
+          <a class="nav-link" href="#">Welcome Guest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+  </ul>
+</nav>
+
+<!--third child-->
+<div class="bg-light">
+    <h3 class="text-center">Enjoy Shopping!</h3>
+    <p class="text-center">Communication is at the heart of e-commerce and community</p>
+</div>
+
+
+<!--fourth child-->
+<div class="row">
+    <div class="col-md-10">
+        <!--products-->
+        <div class="row">
+            <div class="col-md-4">
+            <div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card 
+        title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+            </div>
+            <div class="col-md-4">
+            <div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+            </div>
+            <div class="col-md-4">
+            <div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+            </div>
+        </div>
     </div>
+    <div class="col-md-2">
+        <!--sidenav-->
+    </div>
+</div>
+
+<!--footer-->
+<!--<div class="bg-info p-3 text-center">
+    <p>All rights reserved &copy; Designed by itspep-<script>document.write(new Date().getFullYear());</script></p>
+</div>-->
+    </div>
+    
 
 
 
