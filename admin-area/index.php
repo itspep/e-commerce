@@ -54,16 +54,16 @@
                     <p class="text-light text-center">Pep</p>
                 </div>
                 <div class="button text-center">
-                    <button><a href="" class="nav-link text-light bg-info m-1">Insert Products</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">View Products</a></button>
-                    <button><a href="insert_categories.php" class="nav-link text-light bg-info m-1">Insert Categories</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">View Categories</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">Insert Brands</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">View Brands</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">All Orders</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">All payments</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">List Users</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1">Log Out</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">Insert Products</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Products</a></button>
+                    <button><a href="index.php?insert_category" class="nav-link text-light bg-info m-1 p-1">Insert Categories</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Categories</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">Insert Brands</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Brands</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">All Orders</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">All payments</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">List Users</a></button>
+                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">Log Out</a></button>
                 </div>
             </div>
         </div>
@@ -71,7 +71,14 @@
 
 
 
-
+<!--fourth child-->
+<div class="container">
+    <?php
+    if(isset($_GET['insert_category'])){
+        include('insert_categories.php');
+    }
+    ?>
+</div>
 
 <!--footer-->
 <div class="bg-info p-3 text-center footer">
