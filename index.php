@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-COMMERCE WEBSITE</title>
+    <title>E-Commerce Website</title>
     <!--bootsrap css link-->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
      rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
@@ -205,7 +205,7 @@
 
 <!--footer-->
 <div class="bg-info p-3 text-center">
-    <p>All rights reserved &copy; Designed by itspep-<script>document.write(new Date().getFullYear());</script></p>
+    <p>All rights reserved &copy; Designed by Pep-<script>document.write(new Date().getFullYear());</script></p>
 </div>
     </div>
     
