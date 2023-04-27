@@ -58,7 +58,7 @@
                     <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Products</a></button>
                     <button><a href="index.php?insert_category" class="nav-link text-light bg-info m-1 p-1">Insert Categories</a></button>
                     <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Categories</a></button>
-                    <button><a href="" class="nav-link text-light bg-info m-1 p-1">Insert Brands</a></button>
+                    <button><a href="index.php?insert_brand" class="nav-link text-light bg-info m-1 p-1">Insert Brands</a></button>
                     <button><a href="" class="nav-link text-light bg-info m-1 p-1">View Brands</a></button>
                     <button><a href="" class="nav-link text-light bg-info m-1 p-1">All Orders</a></button>
                     <button><a href="" class="nav-link text-light bg-info m-1 p-1">All payments</a></button>
@@ -72,10 +72,13 @@
 
 
 <!--fourth child-->
-<div class="container">
+<div class="container my-3">
     <?php
     if(isset($_GET['insert_category'])){
         include('insert_categories.php');
+    }
+    if(isset($_GET['insert_brand'])){
+        include('insert_brands.php');
     }
     ?>
 </div>
