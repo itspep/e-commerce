@@ -165,10 +165,13 @@ include('includes/connect.php');
                 <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
             </li>
             <?php
+            //making a query
 $select_brands="select * from brands";
+//sending the query to the server
 $result_brands=mysqli_query($conn, $select_brands);
 //$row_data=mysqli_fetch_assoc($result_brands);
 //echo $row_data['brand_title'];
+//automating the query in a loop
 while($row_data=mysqli_fetch_assoc($result_brands)){
   $brand_title=$row_data['brand_title'];
   $brand_id=$row_data['brand_id'];
@@ -178,6 +181,7 @@ while($row_data=mysqli_fetch_assoc($result_brands)){
 }
 ?>     
         </ul>
+        <!--categories to be displayed-->
         <ul class="navbar-nav me-auto text-center">
             <li class="nav-item bg-info">
                 <a href="#" class="nav-link text-light"><h4>Categories</h4></a>

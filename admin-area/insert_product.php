@@ -1,3 +1,49 @@
+<?php
+include('../includes/connect.php');
+if(isset($_POST['insert_product'])){
+    $product_title=$_POST['product_title'];
+    $product_description=$_POST['product_description'];
+    $product_keywords=$_POST['product_keywords'];
+    $product_category=$_POST['product_categories'];
+    $product_brands=$_POST['product_brands'];
+    $product_price=$_POST['product_price'];
+    //accessing images
+    $product_image1=$_FILES['product_image1']['name'];
+    $product_image2=$_FILES['product_image2']['name'];
+    $product_image3=$_FILES['product_image3']['name'];
+    //accessing image tmp name
+    $temp_image1=$_FILES['product_image1']['tmp_name'];
+    $temp_image2=$_FILES['product_image2']['tmp_name'];
+    $temp_image3=$_FILES['product_image3']['tmp_name'];
+    $product_status='true';
+
+    //checking empty conditions
+    if($product_title=="" or $product_description=="" or $product_keywords==""
+     or $product_category=="" or $product_brands=="" or $product_price=="" or $product_image1==""
+     or $product_image2=="" or $product_image3==""){
+        echo "<script>alert('please fill all available fields')</script>";
+        exit();
+     }else{
+        move_uploaded_file($temp_image1,"product_images/$product_image1");
+        move_uploaded_file($temp_image2,"product_images/$product_image2");
+        move_uploaded_file($temp_image3,"product_images/$product_image3");
+
+        //insert query
+        $insert_query="INSERT INTO products(product_title, product_description, product_keywords, category_id,
+        brand_id, product_image1, product_image2, product_image3, product_price, date, status) 
+        VALUES('$product_title', '$product_description', '$product_keywords', '$product_category', '$product_brands',
+        '$product_image1', '$product_image2', '$product_image3', '$product_price', NOW(), '$product_status')";
+        $result_query=mysqli_query($conn, $insert_query);
+        if($result_query){
+            echo "<script>alert('Successfully inserted the products')</script>";
+        }
+     }
+     //product price
+    
+   
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,20 +89,32 @@
              <div class="form-outlne mb-4 w-50 m-auto">
                 <select name="product_categories" id="" class="form-select">
                     <option value="">Select a Category</option>
-                    <option value="">Category1</option>
-                    <option value="">Category2</option>
-                    <option value="">Category3</option>
-                    <option value="">Category4</option>
+                    <?php
+                        $select_query="select * from categories";
+                        $result_query=mysqli_query($conn, $select_query);
+                        while($row=mysqli_fetch_assoc($result_query)){
+                            $category_title=$row['category_title'];
+                            $category_id=$row['category_id'];
+                            echo "<option value='$category_id'>$category_title</option>";
+                        }
+
+?>
                 </select>
             </div>
             <!--brands-->
             <div class="form-outlne mb-4 w-50 m-auto">
                 <select name="product_brands" id="" class="form-select">
-                    <option value="">Select a Brands</option>
-                    <option value="">Brand1</option>
-                    <option value="">Brand2</option>
-                    <option value="">Brand3</option>
-                    <option value="">Brand4</option>
+                    <option value="">Select a Brand</option>
+                    <?php
+                        $select_query="select * from brands";
+                        $result_query=mysqli_query($conn, $select_query);
+                        while($row=mysqli_fetch_assoc($result_query)){
+                            $brand_title=$row['brand_title'];
+                            $brand_id=$row['brand_id'];
+                            echo "<option value='$brand_id'>$brand_title</option>";
+                        }
+
+?>
                 </select>
             </div>
                <!--image 1-->
